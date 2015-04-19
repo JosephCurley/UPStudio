@@ -1,0 +1,25 @@
+body{
+	background: $page-background;
+}
+.wrapper{
+	width: 900px;
+	font-size: 0;
+	margin: 0 auto;
+}
+.logo{
+	height: 272px;
+	width: 272px;
+	background: $up-yellow;
+	display: block;
+	padding: 0;
+	margin: 0;
+	border-radius: 50%;
+	position: fixed;
+	top: -20px;
+	left: -20px;
+	border: 10px solid $black;
+	text-align: center;
+	line-height: 272px;
+	font-size: 0;
+	background-image: url(http://www.theupstudio.com/img/the_UP_studio_New_York_Architecture_and_Design_Studio_Branding_Identity_Logo.gif);
+}

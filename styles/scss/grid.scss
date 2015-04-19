@@ -1,0 +1,54 @@
+.row{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    .box{
+      margin-left: 10px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+}
+
+.column{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.column{
+   align-items: flex-start;
+  .box{
+    margin-top: 10px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+.box {
+    flex: 1 auto;
+    color: white;
+}
+
+.box-image{
+}
+
+.box--one-third {
+    flex: 1 auto;
+}
+
+.box--two-thirds {
+    flex: 2 auto;
+}
+
+.box--half {
+    flex: 1 auto;
+    margin-left: 10px;
+    &:first-child{
+      margin-left: 0;
+    }
+}
+
+.box--full {
+    flex: 1 100%;
+}
