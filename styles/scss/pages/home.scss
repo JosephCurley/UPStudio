@@ -53,6 +53,7 @@
 .box-image__title{
 	white-space: nowrap;
 	font-size: 32px;
+	transition: font-size .5s;
 	line-height: 100px;
 	text-transform: uppercase;
 	text-shadow: 8px 3px 8px rgba(0,0,0, .9);

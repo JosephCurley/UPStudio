@@ -5,13 +5,12 @@ body{
 	width: 900px;
 	font-size: 0;
 	margin: 100px auto 0;
+	transition: margin .5s;
 	@include media($medium) {
-		width: 600px;
+		max-width: 98%;
 		margin-top: 60px;
 	}
 	@include media($small) {
-		max-width: 400px;
-		width: 98%;
 		margin-top: 40px;
 	}
 }
@@ -31,6 +30,7 @@ body{
 	line-height: 272px;
 	font-size: 0;
 	z-index: 9;
+	transition: all .5s;
 	@include media($medium){
 		height: 160px;
 		width: 160px;
