@@ -4,7 +4,16 @@ body{
 .wrapper{
 	width: 900px;
 	font-size: 0;
-	margin: 0 auto;
+	margin: 100px auto 0;
+	@include media($medium) {
+		width: 600px;
+		margin-top: 60px;
+	}
+	@include media($small) {
+		max-width: 400px;
+		width: 98%;
+		margin-top: 40px;
+	}
 }
 .logo{
 	height: 272px;
@@ -21,5 +30,20 @@ body{
 	text-align: center;
 	line-height: 272px;
 	font-size: 0;
-	background-image: url(http://www.theupstudio.com/img/the_UP_studio_New_York_Architecture_and_Design_Studio_Branding_Identity_Logo.gif);
+	@include media($medium){
+		z-index: 9;
+		height: 160px;
+		width: 160px;
+		border: 6px solid $black;
+		top: -10px;
+		left: -10px;
+	}
+	@include media($small) {
+		height: 120px;
+		width: 120px;
+		top: -5px;
+		left: -5px;
+		line-height: 120px;
+		border: 3px solid $black;
+	}
 }

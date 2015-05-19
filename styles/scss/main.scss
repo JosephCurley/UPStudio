@@ -3,10 +3,12 @@
 @import "neat";
 
 //General
+@import "breakpoints";
 @import "grid";
 @import "colors";
 @import "typography";
 @import "general";
+
 
 //Pages
 @import "pages/home";

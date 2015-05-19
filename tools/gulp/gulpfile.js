@@ -10,7 +10,9 @@ var gulp         = require('gulp'),
     replace      = require("gulp-replace"),
     rename       = require("gulp-rename"),
     bourbon      = require('node-bourbon'),
-    neat         = require('node-neat');
+    neat         = require('node-neat'),
+    imagemin     = require('gulp-imagemin'),
+    pngquant     = require('imagemin-pngquant');
 
 // make plumber with error handler attached
 var drano = function(){
@@ -32,6 +34,11 @@ var css = {
     watch: root + "styles/scss/**/**/*.scss",
     dest: root + "styles/css/"
 };
+
+var images = {
+    src: root + "images/src/*",
+    dest: root + "images/min/"
+}
 
 // create server with browserSync
 gulp.task('connect', function(){
@@ -67,6 +74,18 @@ gulp.task('css', function(){
         .pipe(gulp.dest(css.dest))
 });
 
+gulp.task('imagemin', function () {
+
+    return gulp.src(images.src)
+        .pipe(imagemin({
+            type: 7,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest(images.dest));
+});
+
 
 // create watch task
 gulp.task('watch', function(){
@@ -75,5 +94,5 @@ gulp.task('watch', function(){
 
 
 // default task (run when you run 'gulp')
-gulp.task('default', ['connect', 'watch', 'css']);
+gulp.task('default', ['connect', 'watch', 'css', 'imagemin']);
 
