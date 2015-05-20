@@ -6,12 +6,19 @@ body{
 	font-size: 0;
 	margin: 100px auto 0;
 	transition: margin .5s;
+	transition: width .5s;
 	@include media($medium) {
 		max-width: 98%;
+		width: 600px;
 		margin-top: 60px;
 	}
 	@include media($small) {
 		margin-top: 40px;
+		width: 400px;
+	}
+	@include media($extra-small) {
+		margin-top: 20px;
+		width: 98%;
 	}
 }
 .logo{
@@ -39,8 +46,8 @@ body{
 		left: -10px;
 	}
 	@include media($small) {
-		height: 120px;
-		width: 120px;
+		height: 80px;
+		width: 80px;
 		top: -5px;
 		left: -5px;
 		line-height: 120px;

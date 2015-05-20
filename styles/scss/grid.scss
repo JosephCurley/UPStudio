@@ -2,28 +2,48 @@
 	display: flex;
 	flex-flow: row nowrap;
 	margin-bottom: 10px;
-  & > .box{
-	  margin-left: 10px;
-	  &:first-child{
-		margin-left: 0;
-	  }
+	@include media($medium){
+		margin-bottom: 8px;
+	}
+	@include media($small){	
+		margin-bottom: 5px;
+	}
+	& > .box{
+		margin-left: 10px;
+		@include media($medium){
+			margin-left: 8px;
+		}
+		@include media($small){
+			margin-left: 5px;
+		}
+	 	 &:first-child{
+			margin-left: 0;
+	  	}
 	}
 }
 .column{
-	display: flex;
-	flex-flow: column wrap;
-	align-items: flex-start;
+	// display: flex;
+	// flex-flow: column wrap;
+	// align-items: flex-center;
  	.box{
 		margin-top: 10px;
+		@include media($medium){
+			margin-top: 3%;
+		}
+		@include media($small){
+			margin-top: 3%;
+		}
 		&:first-child{
 	  		margin-top: 0;
 		}
+
   	}
 }
 
 .box {
 	flex: 1 auto;
 	color: white;
+	font-size: 0;
 }
 
 .box--one-third {
@@ -45,6 +65,12 @@
 	margin-left: 10px;
 	&:first-child{
 	  margin-left: 0;
+	}
+	@include media($medium){
+		margin-left: 8px;
+	}
+	@include media($small){
+		margin-left: 5px;
 	}
 }
 
