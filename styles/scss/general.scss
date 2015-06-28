@@ -2,22 +2,30 @@ body{
 	background: $page-background;
 }
 .wrapper{
-	width: 900px;
+	width: $medium-width;
+	@include media($medium) {
+		width: $small-width;
+	}
+	@include media($small) {
+		width: $extra-small-width;
+	}
+	@include media($extra-small) {
+		width: 98%;
+	}
+}
+.wrapper--site{
 	font-size: 0;
 	margin: 100px auto 0;
 	transition: margin .5s, width .5s;
 	@include media($medium) {
 		max-width: 98%;
-		width: 600px;
 		margin-top: 60px;
 	}
 	@include media($small) {
 		margin-top: 40px;
-		width: 400px;
 	}
 	@include media($extra-small) {
 		margin-top: 20px;
-		width: 98%;
 	}
 	@include media($short) {
 		margin-top: 20px;
@@ -37,7 +45,7 @@ body{
 	border: 10px solid $black;
 	text-align: center;
 	line-height: 272px;
-	font-size: 0;
+	font-size: 200px;
 	z-index: 9;
 	transition: all .5s;
 	@include media($medium){
@@ -46,6 +54,8 @@ body{
 		border: 6px solid $black;
 		top: -10px;
 		left: -10px;
+		font-size: 120px;
+		line-height: 160px;
 	}
 	@include media($small) {
 		height: 80px;
@@ -54,5 +64,19 @@ body{
 		left: -5px;
 		line-height: 120px;
 		border: 3px solid $black;
+		font-size: 40px;
+		line-height: 80px;
 	}
+}
+.site-footer{
+	background-color: $black;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	bottom: 0;
+}
+.site-footer__content{
+	background-color: $footer-background;
+	margin-top: 10px;
+	height: 100%;
 }

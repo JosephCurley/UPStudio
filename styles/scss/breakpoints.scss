@@ -1,8 +1,9 @@
-$medium: new-breakpoint(max-width 900px);
-
-$small: new-breakpoint(max-width 600px);
-
-$extra-small: new-breakpoint(max-width 360px);
+$medium-width: 900px;
+$small-width: 600px;
+$extra-small-width: 360px;
+$medium: new-breakpoint(max-width $medium-width);
+$small: new-breakpoint(max-width $small-width);
+$extra-small: new-breakpoint(max-width $extra-small-width);
 
 //Height;
 $short: new-breakpoint(max-height 630px);
