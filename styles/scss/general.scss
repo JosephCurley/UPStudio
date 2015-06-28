@@ -5,8 +5,7 @@ body{
 	width: 900px;
 	font-size: 0;
 	margin: 100px auto 0;
-	transition: margin .5s;
-	transition: width .5s;
+	transition: margin .5s, width .5s;
 	@include media($medium) {
 		max-width: 98%;
 		width: 600px;
@@ -19,6 +18,9 @@ body{
 	@include media($extra-small) {
 		margin-top: 20px;
 		width: 98%;
+	}
+	@include media($short) {
+		margin-top: 20px;
 	}
 }
 .logo{

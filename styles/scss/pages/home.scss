@@ -18,6 +18,7 @@
 		}
 		.box-image__logo{
 			display: inline-block;
+			fill: white;
 		}
   	}
 }
@@ -42,18 +43,20 @@
 
 }
 .box-image__logo{
+	height: 100%;
+	width: 100%;
 	display: none;
-	@include media($medium){
-		max-width: 200px;
-		height: auto;
-	}
-	@include media($small){
-		max-width: 140px;
-		height: auto;
-	}
-	@include media($extra-small){
-		max-width: 100px;
-	}
+	// @include media($medium){
+	// 	max-width: 200px;
+	// 	height: auto;
+	// }
+	// @include media($small){
+	// 	max-width: 140px;
+	// 	height: auto;
+	// }
+	// @include media($extra-small){
+	// 	max-width: 100px;
+	// }
 }
 .box-image__title{
 	white-space: nowrap;
@@ -81,4 +84,11 @@
 	font-size: .5em;
 	position: relative;
 	top: 10px;
+	&.in-progress{
+		left: 0;
+		right: 0;
+		position: absolute;
+		text-transform: uppercase;
+		top: 2em;
+	}
 }

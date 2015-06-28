@@ -12,7 +12,10 @@ var gulp         = require('gulp'),
     bourbon      = require('node-bourbon'),
     neat         = require('node-neat'),
     imagemin     = require('gulp-imagemin'),
+    svgmin       = require('gulp-svgmin'),
+    svgstore      = require('gulp-svgstore'),
     pngquant     = require('imagemin-pngquant');
+
 
 // make plumber with error handler attached
 var drano = function(){
@@ -39,6 +42,15 @@ var images = {
     src: root + "images/src/*",
     dest: root + "images/min/"
 }
+var svg = {
+    src   : root + "/images/icons/**.svg",
+    watch : root + "/images/icons/**.svg",
+    dest  : root + "/images/",
+
+    filename : "sprites.svg",
+
+    svgmin: false
+};
 
 // create server with browserSync
 gulp.task('connect', function(){
@@ -86,6 +98,24 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest(images.dest));
 });
 
+gulp.task("svg-sprite", function(){
+
+    return gulp.src(svg.src)
+        .pipe(drano())
+        .pipe(svgmin())
+        .pipe(svgstore({
+            inlineSvg: false
+        }))
+    
+        // HACK * https://github.com/FWeinb/grunt-svgstore/issues/77
+        // gulp-replace to include xmlns:xlink="http://www.w3.org/1999/xlink
+        .pipe(replace(/xmlns/, 'xmlns:xlink="http://www.w3.org/1999/xlink" xmlns'))
+    
+        .pipe(rename(svg.filename))
+        .pipe(gulp.dest(svg.dest));
+
+});
+
 
 // create watch task
 gulp.task('watch', function(){
@@ -94,5 +124,5 @@ gulp.task('watch', function(){
 
 
 // default task (run when you run 'gulp')
-gulp.task('default', ['connect', 'watch', 'css', 'imagemin']);
+gulp.task('default', ['connect', 'watch', 'css', 'imagemin', 'svg-sprite']);
 

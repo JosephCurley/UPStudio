@@ -22,9 +22,9 @@
 	}
 }
 .column{
-	// display: flex;
-	// flex-flow: column wrap;
-	// align-items: flex-center;
+	//display: flex;
+ 	//flex-flow: column wrap;
+	//align-items: flex-center;
  	.box{
 		margin-top: 10px;
 		@include media($medium){
@@ -47,11 +47,11 @@
 }
 
 .box--one-third {
-	flex: 1 auto;
+	flex: 1 280px;
 }
 
 .box--two-thirds {
-	flex: 2 auto;
+	flex: 1 610px;
 }
 .box--four{
 	flex: 1 375px;

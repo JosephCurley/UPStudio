@@ -16,6 +16,8 @@
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.3",
     "gulp-sass": "^1.0.0",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-svgstore": "^5.0.2",
     "node-bourbon": "^4.2.1-beta1",
     "node-neat": "^1.7.1-beta1"
   },

@@ -3,15 +3,15 @@
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
 1 verbose cli   '--save-dev',
-1 verbose cli   'gulp-imagemin-pngquant' ]
+1 verbose cli   'svg-min' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
 4 warn package.json gulp-simple@0.0.0 No description
 5 warn package.json gulp-simple@0.0.0 No repository field.
 6 warn package.json gulp-simple@0.0.0 No README data
 7 verbose readDependencies using package.json deps
-8 verbose cache add [ 'gulp-imagemin-pngquant', null ]
-9 verbose cache add name=undefined spec="gulp-imagemin-pngquant" args=["gulp-imagemin-pngquant",null]
+8 verbose cache add [ 'svg-min', null ]
+9 verbose cache add name=undefined spec="svg-min" args=["svg-min",null]
 10 verbose parsed url { protocol: null,
 10 verbose parsed url   slashes: null,
 10 verbose parsed url   auth: null,
@@ -21,67 +21,67 @@
 10 verbose parsed url   hash: null,
 10 verbose parsed url   search: null,
 10 verbose parsed url   query: null,
-10 verbose parsed url   pathname: 'gulp-imagemin-pngquant',
-10 verbose parsed url   path: 'gulp-imagemin-pngquant',
-10 verbose parsed url   href: 'gulp-imagemin-pngquant' }
-11 silly lockFile 1c53adec-gulp-imagemin-pngquant gulp-imagemin-pngquant
-12 verbose lock gulp-imagemin-pngquant /Users/joseph/.npm/1c53adec-gulp-imagemin-pngquant.lock
-13 silly lockFile 1c53adec-gulp-imagemin-pngquant gulp-imagemin-pngquant
-14 silly lockFile 1c53adec-gulp-imagemin-pngquant gulp-imagemin-pngquant
-15 verbose addNamed [ 'gulp-imagemin-pngquant', '' ]
+10 verbose parsed url   pathname: 'svg-min',
+10 verbose parsed url   path: 'svg-min',
+10 verbose parsed url   href: 'svg-min' }
+11 silly lockFile 01859c75-svg-min svg-min
+12 verbose lock svg-min /Users/joseph/.npm/01859c75-svg-min.lock
+13 silly lockFile 01859c75-svg-min svg-min
+14 silly lockFile 01859c75-svg-min svg-min
+15 verbose addNamed [ 'svg-min', '' ]
 16 verbose addNamed [ null, '*' ]
-17 silly lockFile 6798a60a-gulp-imagemin-pngquant gulp-imagemin-pngquant@
-18 verbose lock gulp-imagemin-pngquant@ /Users/joseph/.npm/6798a60a-gulp-imagemin-pngquant.lock
-19 silly addNameRange { name: 'gulp-imagemin-pngquant', range: '*', hasData: false }
-20 verbose request where is /gulp-imagemin-pngquant
+17 silly lockFile 5cf115ef-svg-min svg-min@
+18 verbose lock svg-min@ /Users/joseph/.npm/5cf115ef-svg-min.lock
+19 silly addNameRange { name: 'svg-min', range: '*', hasData: false }
+20 verbose request where is /svg-min
 21 verbose request registry https://registry.npmjs.org/
-22 verbose request id 053b7c1be6716b5f
-23 verbose url raw /gulp-imagemin-pngquant
-24 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-imagemin-pngquant' ]
-25 verbose url resolved https://registry.npmjs.org/gulp-imagemin-pngquant
-26 verbose request where is https://registry.npmjs.org/gulp-imagemin-pngquant
-27 info trying registry request attempt 1 at 18:54:12
-28 http GET https://registry.npmjs.org/gulp-imagemin-pngquant
-29 http 404 https://registry.npmjs.org/gulp-imagemin-pngquant
+22 verbose request id 1a6a7721628ee88a
+23 verbose url raw /svg-min
+24 verbose url resolving [ 'https://registry.npmjs.org/', './svg-min' ]
+25 verbose url resolved https://registry.npmjs.org/svg-min
+26 verbose request where is https://registry.npmjs.org/svg-min
+27 info trying registry request attempt 1 at 14:15:13
+28 http GET https://registry.npmjs.org/svg-min
+29 http 404 https://registry.npmjs.org/svg-min
 30 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 30 verbose headers   'content-type': 'application/json',
 30 verbose headers   'cache-control': 'max-age=0',
 30 verbose headers   'content-length': '51',
 30 verbose headers   'accept-ranges': 'bytes',
-30 verbose headers   date: 'Sat, 02 May 2015 22:54:11 GMT',
+30 verbose headers   date: 'Sun, 28 Jun 2015 18:15:13 GMT',
 30 verbose headers   via: '1.1 varnish',
 30 verbose headers   age: '0',
 30 verbose headers   connection: 'keep-alive',
-30 verbose headers   'x-served-by': 'cache-atl6222-ATL',
+30 verbose headers   'x-served-by': 'cache-atl6235-ATL',
 30 verbose headers   'x-cache': 'MISS',
 30 verbose headers   'x-cache-hits': '0',
-30 verbose headers   'x-timer': 'S1430607251.735597,VS0,VE86' }
+30 verbose headers   'x-timer': 'S1435515313.447370,VS0,VE349' }
 31 silly registry.get cb [ 404,
 31 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 31 silly registry.get     'content-type': 'application/json',
 31 silly registry.get     'cache-control': 'max-age=0',
 31 silly registry.get     'content-length': '51',
 31 silly registry.get     'accept-ranges': 'bytes',
-31 silly registry.get     date: 'Sat, 02 May 2015 22:54:11 GMT',
+31 silly registry.get     date: 'Sun, 28 Jun 2015 18:15:13 GMT',
 31 silly registry.get     via: '1.1 varnish',
 31 silly registry.get     age: '0',
 31 silly registry.get     connection: 'keep-alive',
-31 silly registry.get     'x-served-by': 'cache-atl6222-ATL',
+31 silly registry.get     'x-served-by': 'cache-atl6235-ATL',
 31 silly registry.get     'x-cache': 'MISS',
 31 silly registry.get     'x-cache-hits': '0',
-31 silly registry.get     'x-timer': 'S1430607251.735597,VS0,VE86' } ]
-32 silly lockFile 6798a60a-gulp-imagemin-pngquant gulp-imagemin-pngquant@
-33 silly lockFile 6798a60a-gulp-imagemin-pngquant gulp-imagemin-pngquant@
-34 error 404 404 Not Found: gulp-imagemin-pngquant
+31 silly registry.get     'x-timer': 'S1435515313.447370,VS0,VE349' } ]
+32 silly lockFile 5cf115ef-svg-min svg-min@
+33 silly lockFile 5cf115ef-svg-min svg-min@
+34 error 404 404 Not Found: svg-min
 34 error 404
-34 error 404 'gulp-imagemin-pngquant' is not in the npm registry.
+34 error 404 'svg-min' is not in the npm registry.
 34 error 404 You should bug the author to publish it
 34 error 404 It was specified as a dependency of 'gulp-simple'
 34 error 404
 34 error 404 Note that you can also install from a
 34 error 404 tarball, folder, or http url, or git url.
 35 error System Darwin 14.3.0
-36 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "gulp-imagemin-pngquant"
+36 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "svg-min"
 37 error cwd /Users/joseph/Development/UP/tools/gulp
 38 error node -v v0.10.36
 39 error npm -v 1.4.28
