@@ -6,4 +6,5 @@ $small: new-breakpoint(max-width $small-width);
 $extra-small: new-breakpoint(max-width $extra-small-width);
 
 //Height;
-$short: new-breakpoint(max-height 630px);
+$short: new-breakpoint(max-height 830px);
+$extra-short: new-breakpoint(max-height 630px);

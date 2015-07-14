@@ -5,6 +5,9 @@
 	@include media($medium){
 		margin-bottom: 8px;
 	}
+	@include media($short){
+		margin-bottom: 8px;
+	}
 	@include media($small){	
 		margin-bottom: 5px;
 	}
@@ -28,6 +31,9 @@
  	.box{
 		margin-top: 10px;
 		@include media($medium){
+			margin-top: 3%;
+		}
+		@include media($short){
 			margin-top: 3%;
 		}
 		@include media($small){
@@ -69,6 +75,10 @@
 	@include media($medium){
 		margin-left: 8px;
 	}
+	@include media($short){
+		margin-left: 8px;
+	}
+
 	@include media($small){
 		margin-left: 5px;
 	}

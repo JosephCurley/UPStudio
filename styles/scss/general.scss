@@ -1,13 +1,17 @@
 body{
 	background: $page-background;
+	margin: 0;
 }
 .wrapper{
 	width: $medium-width;
 	@include media($medium) {
 		width: $small-width;
 	}
+	@include media($short) {
+		width: $small-width;
+	}
 	@include media($small) {
-		width: $extra-small-width;
+		width: 98%;
 	}
 	@include media($extra-small) {
 		width: 98%;
@@ -21,13 +25,20 @@ body{
 		max-width: 98%;
 		margin-top: 60px;
 	}
-	@include media($small) {
+	@include media($short) {
+		max-width: 600px;
+		width: 98%;
 		margin-top: 40px;
 	}
-	@include media($extra-small) {
-		margin-top: 20px;
+	@include media($extra-short) {
+		max-width: 520px;
 	}
-	@include media($short) {
+	@include media($small) {
+		margin-top: 40px;
+		width: auto;
+		max-width: 98%;
+	}
+	@include media($extra-small) {
 		margin-top: 20px;
 	}
 }
@@ -49,6 +60,15 @@ body{
 	z-index: 9;
 	transition: all .5s;
 	@include media($medium){
+		height: 160px;
+		width: 160px;
+		border: 6px solid $black;
+		top: -10px;
+		left: -10px;
+		font-size: 120px;
+		line-height: 160px;
+	}
+	@include media($short){
 		height: 160px;
 		width: 160px;
 		border: 6px solid $black;
