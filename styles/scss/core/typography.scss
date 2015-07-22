@@ -1,0 +1,12 @@
+
+@mixin body-type {
+	font-family: Helvetica, Arial, sans-serif;
+	letter-spacing: .1em;
+	line-height: 1.25em;
+}
+
+@mixin condensed {
+	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: auto;
+	line-height: auto;
+}

@@ -1,3 +1,5 @@
+//Custom Flex grid. by Joseph Curley.
+
 .row{
 	display: flex;
 	flex-flow: row nowrap;
@@ -45,29 +47,53 @@
 
   	}
 }
-
 .box {
 	flex: 1 auto;
 	color: white;
 	font-size: 0;
 }
 
-.box--one-third {
+.box--two {
 	flex: 1 280px;
 }
 
-.box--two-thirds {
+.box--three {
 	flex: 1 610px;
 }
-.box--four{
+
+.box--four {
 	flex: 1 375px;
 }
-.box--five{
+
+.box--five {
 	flex: 1 515px;
 }
 
+.box--six {
+	flex: 1 550px;
+}
+
+.box--seven {
+	flex: 1 340px;
+}
+
+.box--eight {
+	flex: 1 300px;
+}
+
+.box--nine {
+	flex: 1 590px;
+}
+
+.box--ten {
+	flex: 1 600px;
+}
+
+.box--eleven {
+	flex: 1 290px;
+}
 .box--half {
-	flex: 1 auto;
+	flex: 1 445;
 	margin-left: 10px;
 	&:first-child{
 	  margin-left: 0;
@@ -81,6 +107,9 @@
 
 	@include media($small){
 		margin-left: 5px;
+	}
+	img{
+		max-width: 445px;
 	}
 }
 

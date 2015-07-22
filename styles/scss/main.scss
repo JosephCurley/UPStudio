@@ -3,16 +3,16 @@
 @import "neat";
 
 //General
-@import "breakpoints";
-@import "grid";
-@import "colors";
-@import "typography";
-@import "general";
-@import "icons";
+@import "core/breakpoints";
+@import "core/grid";
+@import "core/colors";
+@import "core/typography";
+@import "core/general";
+@import "core/icons";
 
 
 //Pages
-@import "pages/home";
-@import "pages/project";
+@import "pages/home/home";
+@import "pages/detail/detail";
 
 

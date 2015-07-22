@@ -1,8 +1,8 @@
 .box-image{
+	background-color: $description-background;
 	position: relative;
 	cursor: pointer;
   	.project-image{
-		filter: grayscale(100%) brightness(70%);
 		display: block;
 		@include media($medium){
 			width: 100%;
@@ -13,18 +13,21 @@
 			height: auto;
 		}
 	}
-  	&:hover{
-  		.project-image{
-			filter: none;
-		}
-		.box-image__title{
-			display: none;
-		}
-		.box-image__logo{
-			display: inline-block;
-			fill: white;
-		}
-  	}
+}
+.box-link:hover{
+	.box-image__title{
+		display: none;
+	}
+	.box-image__logo{
+		display: inline-block;
+		fill: white;
+	}
+	.homepage-image{
+		filter: none;
+	}
+}
+.homepage-image{
+	filter: grayscale(100%) brightness(70%);
 }
 .box-image__overlay{
 	position: absolute;
@@ -105,3 +108,26 @@
 		top: 2em;
 	}
 }
+.box-link{
+	color: $project-heading;
+	&:visited{
+		color: $project-heading;
+	}
+}
+.image-description{
+//	background-color: $description-background;
+	color: $description-text;
+	text-align: center;
+	height: auto;
+	padding: 5px 15px;
+	font-size: 12px;
+	transition-duration: .4s;
+	transition-property: line-height, font-size;
+	@include media($small){
+		font-size: 10px;
+		line-height: 1.4em;
+	}
+}
+
+
+

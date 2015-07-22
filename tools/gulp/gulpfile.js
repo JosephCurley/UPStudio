@@ -39,7 +39,7 @@ var css = {
 };
 
 var images = {
-    src: root + "images/src/*",
+    src: root + "images/src/**/*",
     dest: root + "images/min/"
 }
 var svg = {

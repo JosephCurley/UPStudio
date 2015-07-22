@@ -1,10 +1,13 @@
+//Size Variables
 $medium-width: 900px;
 $small-width: 600px;
 $extra-small-width: 360px;
+
+//Width Break points.
 $medium: new-breakpoint(max-width $medium-width);
 $small: new-breakpoint(max-width $small-width);
 $extra-small: new-breakpoint(max-width $extra-small-width);
 
-//Height;
+//Height Break points.
 $short: new-breakpoint(max-height 830px);
 $extra-short: new-breakpoint(max-height 630px);

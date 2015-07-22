@@ -1,7 +1,16 @@
+::selection{
+ color: black;
+ background: $up-yellow;
+} 
+
 body{
 	background: $page-background;
+//	background: firebrick;
 	margin: 0;
+	padding-bottom: 30px;
+	@include body-type;
 }
+
 .wrapper{
 	width: $medium-width;
 	@include media($medium) {
@@ -10,6 +19,9 @@ body{
 	@include media($short) {
 		width: $small-width;
 	}
+	@include media($extra-short) {
+		max-width: 520px;
+	}
 	@include media($small) {
 		width: 98%;
 	}
@@ -17,10 +29,11 @@ body{
 		width: 98%;
 	}
 }
+
 .wrapper--site{
 	font-size: 0;
 	margin: 100px auto 0;
-	transition: margin .5s, width .5s;
+	//transition: margin .5s, width .5s;
 	@include media($medium) {
 		max-width: 98%;
 		margin-top: 60px;
@@ -43,6 +56,7 @@ body{
 	}
 }
 .logo{
+	@include condensed;
 	height: 272px;
 	width: 272px;
 	background: $up-yellow;
