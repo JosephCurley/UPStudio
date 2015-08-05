@@ -13,7 +13,10 @@ var gulp         = require('gulp'),
     neat         = require('node-neat'),
     imagemin     = require('gulp-imagemin'),
     svgmin       = require('gulp-svgmin'),
-    svgstore      = require('gulp-svgstore'),
+    svgstore     = require('gulp-svgstore'),
+    babel        = require('gulp-babel'),
+    concat       = require('gulp-concat'),
+    browserify   = require('browserify'),
     pngquant     = require('imagemin-pngquant');
 
 
@@ -27,8 +30,7 @@ var drano = function(){
     });
 };
 
-
-// setup some variables with paths
+ // setup some variables with paths
 // Change these variables to suit your project
 var root = "../../";
 
@@ -41,7 +43,13 @@ var css = {
 var images = {
     src: root + "images/src/**/*",
     dest: root + "images/min/"
-}
+};
+
+var js = {
+    src   : root + "js/UP/**/*.js",
+    dest  : root + "js/app/"
+};
+
 var svg = {
     src   : root + "/images/icons/**.svg",
     watch : root + "/images/icons/**.svg",
@@ -98,6 +106,24 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest(images.dest));
 });
 
+gulp.task("js", function () {
+    // for browserify usage, see https://medium.com/@sogko/gulp-browserify-the-gulp-y-way-bb359b3f9623
+    var browserified = transform(function(filename) {
+        var b = browserify(js.browserify || {});
+        b.add(filename);
+        b.transform(babelify);
+        b.transform(shim);
+        return b.bundle();
+    });
+
+    return gulp.src(js.src)
+        .pipe(drano())
+        .pipe(browserified)
+        //.pipe(gulpif((js.uglify), uglify(js.uglify)))
+        .pipe(gulp.dest(js.dest));
+
+});
+
 gulp.task("svg-sprite", function(){
 
     return gulp.src(svg.src)
@@ -124,5 +150,13 @@ gulp.task('watch', function(){
 
 
 // default task (run when you run 'gulp')
-gulp.task('default', ['connect', 'watch', 'css', 'imagemin', 'svg-sprite']);
+gulp.task('default', ['connect', 'watch', 'css', 'imagemin', 'svg-sprite', 'js']);
+
+
+
+
+
+
+
+
 

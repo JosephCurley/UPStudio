@@ -1,0 +1,30 @@
+.box--text{
+	font-size: 1rem;
+	.box-link{
+		text-decoration: none;
+	}
+	&.box--third{
+		@include media($medium) {
+			flex-basis: 100%;
+			flex-shrink: 0;
+		}	
+	}
+}
+.box__category-title{
+	background: $category-background;
+	text-align: center;
+	text-transform: uppercase;
+	padding: .5rem 0;
+}
+.box__category-secondary{
+	background: $category-secondary-background;
+	text-align: center;
+	text-transform: uppercase;
+	padding: .5rem 0;
+	margin: 0;
+	font-weight: normal;
+	font-size: 1rem;
+}
+.box--text__description{
+	font-size: .8rem;
+}

@@ -1,6 +1,8 @@
+@include font-face("museo-sans", "../fonts/museosans_500-webfont-webfont", 500);
+@include font-face("museo-sans", "../fonts/museosans_700-webfont-webfont", 700);
 
 @mixin body-type {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: museo-sans, Helvetica, Arial, sans-serif;
 	letter-spacing: .1em;
 	line-height: 1.25em;
 }

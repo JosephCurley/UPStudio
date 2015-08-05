@@ -26,6 +26,9 @@
 	  	}
 	}
 }
+.row--responsive{
+	flex-wrap: wrap;
+}
 .column{
 	//display: flex;
  	//flex-flow: column wrap;
@@ -111,6 +114,9 @@
 	img{
 		max-width: 445px;
 	}
+}
+.box--third{
+	flex: 1 290px;
 }
 
 .box--full {
