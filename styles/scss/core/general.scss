@@ -1,116 +1,147 @@
-::selection{
- color: black;
- background: $up-yellow;
-} 
 
-body{
-	background: $page-background;
-//	background: firebrick;
-	margin: 0;
-	padding-bottom: 30px;
-	@include body-type;
+::selection {
+    color: black;
+    background: $up-yellow;
 }
 
-.wrapper{
-	width: $medium-width;
-	@include media($medium) {
-		width: $small-width;
-	}
-	@include media($short) {
-		width: $small-width;
-	}
-	@include media($extra-short) {
-		max-width: 520px;
-	}
-	@include media($small) {
-		width: 98%;
-	}
-	@include media($extra-small) {
-		width: 98%;
-	}
+body {
+    background: $page-background;
+    margin: 0;
+    padding-bottom: 30px;
+    @include body-type;
 }
 
-.wrapper--site{
-	font-size: 0;
-	margin: 100px auto 0;
-	//transition: margin .5s, width .5s;
-	@include media($medium) {
-		max-width: 98%;
-		margin-top: 60px;
-	}
-	@include media($short) {
-		max-width: 600px;
-		width: 98%;
-		margin-top: 40px;
-	}
-	@include media($extra-short) {
-		max-width: 520px;
-	}
-	@include media($small) {
-		margin-top: 40px;
-		width: auto;
-		max-width: 98%;
-	}
-	@include media($extra-small) {
-		margin-top: 20px;
-	}
+.wrapper {
+    width: $medium-width;
+    @include media($medium) {
+        width: $small-width;
+    }
+    @include media($short) {
+        width: $small-width;
+    }
+    @include media($extra-short) {
+        max-width: 520px;
+    }
+    @include media($small) {
+        width: 98%;
+    }
+    @include media($extra-small) {
+        width: 98%;
+    }
 }
-.logo{
-	@include condensed;
-	height: 272px;
-	width: 272px;
-	background: $up-yellow;
-	display: block;
-	padding: 0;
-	margin: 0;
-	border-radius: 50%;
-	position: fixed;
-	top: -20px;
-	left: -20px;
-	border: 10px solid $black;
-	text-align: center;
-	line-height: 272px;
-	font-size: 200px;
-	z-index: 9;
-	transition: all .5s;
-	@include media($medium){
-		height: 160px;
-		width: 160px;
-		border: 6px solid $black;
-		top: -10px;
-		left: -10px;
-		font-size: 120px;
-		line-height: 160px;
-	}
-	@include media($short){
-		height: 160px;
-		width: 160px;
-		border: 6px solid $black;
-		top: -10px;
-		left: -10px;
-		font-size: 120px;
-		line-height: 160px;
-	}
-	@include media($small) {
-		height: 80px;
-		width: 80px;
-		top: -5px;
-		left: -5px;
-		line-height: 120px;
-		border: 3px solid $black;
-		font-size: 40px;
-		line-height: 80px;
-	}
+
+.wrapper--site {
+    font-size: 0;
+    margin: 100px auto 0;
+    //transition: margin .5s, width .5s;
+    @include media($medium) {
+        max-width: 98%;
+        margin-top: 60px;
+    }
+    @include media($short) {
+        max-width: 600px;
+        width: 98%;
+        margin-top: 40px;
+    }
+    @include media($extra-short) {
+        max-width: 520px;
+    }
+    @include media($small) {
+        margin-top: 40px;
+        width: auto;
+        max-width: 98%;
+    }
+    @include media($extra-small) {
+        margin-top: 20px;
+    }
 }
-.site-footer{
-	background-color: $black;
-	width: 100%;
-	height: 40px;
-	position: fixed;
-	bottom: 0;
+
+.logo {
+  //  animation: logo-morph 10s 1 0s;
+    @include condensed;
+    background: $up-yellow;
+    border: 10px solid $black;
+    border-radius: 50%;
+    display: block;
+    font-size: 200px;
+    height: 272px;
+    left: -20px;
+    line-height: 272px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all .5s;
+    width: 272px;
+    z-index: 9;
+    @include media($medium) {
+        height: 160px;
+        width: 160px;
+        border: 6px solid $black;
+        top: -10px;
+        left: -10px;
+        font-size: 120px;
+        line-height: 160px;
+    }
+    @include media($short) {
+        height: 160px;
+        width: 160px;
+        border: 6px solid $black;
+        top: -10px;
+        left: -10px;
+        font-size: 120px;
+        line-height: 160px;
+    }
+    @include media($small) {
+        height: 80px;
+        width: 80px;
+        top: -5px;
+        left: -5px;
+        line-height: 120px;
+        border: 3px solid $black;
+        font-size: 40px;
+        line-height: 80px;
+    }
+    @include media(orientation portrait max-width 768px max-height 1200px){
+        animation: logo-spin 2s 1 0s;
+    }
+    @include media(orientation landscape max-width 1080px max-height 800px){
+        animation: logo-spin 2.2s 1 0s;
+    }
 }
-.site-footer__content{
-	background-color: $footer-background;
-	margin-top: 10px;
-	height: 100%;
+
+@keyframes logo-spin {
+    0%   { transform: rotate(90deg); }
+    30%   { transform: rotate(-20deg); }
+    60%   { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+@keyframes logo-morph{
+    0%     {   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0); }
+    20%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+    25%     {   clip-path: polygon(50% 50%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+    35%     {   clip-path: polygon(30% 0%, 50% 50%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+    40%     {   clip-path: polygon(30% 0%, 70% 0%, 50% 50%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+    45%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 50% 50%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+    50%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 50% 50%, 30% 100%, 0% 70%, 0% 30%); }
+    55%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 50% 50%, 0% 70%, 0% 30%); }
+    60%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 50% 50%, 0% 30%); }
+    65%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 50% 50%); }
+    70%     {   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+    100%    {   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0); }
+}
+.site-footer {
+    background-color: $black;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+}
+
+.site-footer__content {
+    background-color: $footer-background;
+    margin-top: 10px;
+    height: 100%;
 }

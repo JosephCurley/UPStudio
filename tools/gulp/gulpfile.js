@@ -108,17 +108,9 @@ gulp.task('imagemin', function () {
 
 gulp.task("js", function () {
     // for browserify usage, see https://medium.com/@sogko/gulp-browserify-the-gulp-y-way-bb359b3f9623
-    var browserified = transform(function(filename) {
-        var b = browserify(js.browserify || {});
-        b.add(filename);
-        b.transform(babelify);
-        b.transform(shim);
-        return b.bundle();
-    });
-
+ 
     return gulp.src(js.src)
         .pipe(drano())
-        .pipe(browserified)
         //.pipe(gulpif((js.uglify), uglify(js.uglify)))
         .pipe(gulp.dest(js.dest));
 

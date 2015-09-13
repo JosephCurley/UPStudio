@@ -95,11 +95,11 @@
 	}
 }
 .box-image__date{
-	vertical-align: baseline;
-	font-weight: 300;
 	font-size: .5em;
+	font-weight: 300;
 	position: relative;
 	top: 10px;
+	vertical-align: baseline;
 	&.in-progress{
 		left: 0;
 		right: 0;
