@@ -1,0 +1,106 @@
+.about-project{
+	background-color: $about-background;
+	margin-bottom: 10px;
+	clear: both;
+	overflow: hidden;
+}
+.about-project__title-bar{
+	color: $white;
+	display: block;
+	font-size: .65rem;
+	font-weight: normal;
+	padding: 10px;
+	position: relative;
+	text-align: left;
+	text-transform: uppercase;
+	width: 100%;
+	&:after{
+		border-bottom: 10px solid white;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		content: '';
+		height: 0; 
+		position: absolute;
+		right: 10px;
+		top: 15px;
+		transition: transform .8s;
+		width: 0; 
+	}
+	.js-open &{
+		font-size: 0;
+		&:after{
+			transform: rotate(180deg);
+		}
+	}
+}
+.about-project__body{
+	max-height: 0;
+	overflow: hidden;
+	display: flex;
+	.js-open &{
+		padding: 10px;
+		max-height: 100%;
+	}
+	@include media($small){
+		display: block;
+	}
+}
+.about-project__logo{
+	height: 100%;
+    width: 100%;
+    color: white;
+    fill: currentColor;
+    @include media($small){
+    	margin: 0 auto;
+		width: 50%;
+	}
+}
+.about-project__title{
+	color: $white;
+	font-size: 3rem;
+	line-height: 1em;
+	font-weight: normal;
+	margin: 0;
+}
+.about-project__description{
+	color: $white;
+	font-size: .8rem;
+	font-weight: normal;
+}
+.about-project__logo-wrapper{
+	align-items: center;
+	display: inline-flex;
+	flex-align: center;
+	width: 30%;
+	@include media($small){
+		width: 100%;
+	}
+}
+.about-project__logo-wrapper, .about-project__text-wrapper{
+	font-size: 1rem;
+
+}
+.about-project__text-wrapper{
+	border-width: 0 0 0 2px;
+	border-style: solid;
+	border-color: $white;
+	color: $black;
+	display: inline-block;
+	width: 60%;
+	margin-left: 5%;
+	padding-left: 5%;
+	@include media($small){
+		display: block;
+		width: 100%;
+		border-width: 2px 0 0 0;
+		padding: 5% 0 0 0;
+	}
+}
+.about-project__credit-list{
+	list-style: none;
+	font-size: .8rem;
+	padding-left: 0;
+}
+.about-project__credit-link{
+	color: $white;
+}

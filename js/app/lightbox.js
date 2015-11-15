@@ -15,16 +15,7 @@ UP.lightbox = (function() {
 	var imageCount = 0;
 
 	var $modal;
-	var modalTemplate = "<div class='js-lightbox-modal'>" + "\n" +
-							"<div class='lightbox-modal__wrapper'>" + "\n" +
-								"<div class='lightbox-modal__prev-arrow'></div>" + "\n" +
-								"<div class='lightbox-modal__next-arrow'></div>" + "\n" +
-								"<div class='lightbox-modal__image-wrapper'>" + "\n" +
-								"</div>" + "\n" +
-								"<div class='lightbox-modal__caption-wrapper'>" + "\n" +
-								"</div>" + "\n" +
-							"</div>" + "\n" +
-						"</div>";
+	var modalTemplate = "<div class='js-lightbox-modal'><div class='lightbox-modal__wrapper'><div class='lightbox-modal__image-wrapper'></div><div class='lightbox-modal__caption-wrapper'></div></div></div>";
 
 	//Create a document fragment of the modal wrapper and append to the body.
 	var buildModal = function() {
@@ -139,13 +130,6 @@ UP.lightbox = (function() {
 					transitionLightbox(e);
 				}
 			} 
-		});
-
-		$('.lightbox-modal__prev-arrow').on('click', function(e) {
-			transitionBack();
-		});
-		$('.lightbox-modal__next-arrow').on('click', function(e){
-			transitionForward()
 		});
 
 		window.addEventListener("orientationchange", function() {

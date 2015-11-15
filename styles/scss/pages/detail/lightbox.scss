@@ -44,7 +44,28 @@
 		animation: slideIn 1s .4s forwards;
 	}
 }
+.lightbox-modal__next-arrow, .lightbox-modal__prev-arrow{
+	background: none;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	cursor: pointer;
+	height: 25px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 15px;
 
+}
+.lightbox-modal__prev-arrow{
+	left: 0px;
+	border-left: 15px solid transparent;
+	border-right: 15px solid $white;
+}
+.lightbox-modal__next-arrow{
+	right: 0px;
+	border-left: 15px solid $white;
+	border-right: 15px solid transparent;
+}
 .lightbox-modal__image-wrapper {
 	display: block;
 	font-size: 0;
